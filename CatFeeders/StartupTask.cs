@@ -21,7 +21,6 @@ namespace CatFeeders
         public void Run(IBackgroundTaskInstance taskInstance)
         {
             deferral = taskInstance.GetDeferral();
-            x:
             foreach (int i in pinNumbers)
             {
                 using (GpioPin p = gpio.OpenPin(i))
@@ -31,7 +30,6 @@ namespace CatFeeders
                     System.Threading.Tasks.Task.Delay(5000).Wait();
                 }
             }
-            goto x;
         }
     }
 }

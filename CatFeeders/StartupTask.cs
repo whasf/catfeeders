@@ -18,7 +18,6 @@ namespace CatFeeders
         private BackgroundTaskDeferral deferral;
         GpioController gpio = GpioController.GetDefault();
         int[] pinNumbers = new int[] { 17, 27, 22 };
-        GpioPin[] pins = new GpioPin[3];
 
         public void Run(IBackgroundTaskInstance taskInstance)
         {
